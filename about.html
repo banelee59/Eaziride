@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EaziRide</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./img/eaziride-logo.svg" alt="EaziRide Logo">
+            </div>
+                 <!-- Navbar with Dropdown -->
+    <div class="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+           
+        </ul>
+
+        <!-- Dropdown menu -->
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown()">Menu</button>
+            <div id="dropdown-content" class="dropdown-content">
+                
+               <a href="driver-owner.html">Become a Driver Owner</a>
+                <a href="ride-with-us.html">Ride With Us</a>
+                <a href="safety.html">Safety</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="statistics.html">Our Statistics</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact Us</a>
+               
+            </div>
+        </div>
+    </div>
+        </nav>
+
+    </header>
+   
+    <!-- About Us Section -->
+    <section class="about-us">
+        <div class="about-container">
+            <h1>About EaziRide</h1>
+            <p>
+                EaziRide is not just another ride-sharing platform. It is a movement that empowers drivers to become 
+                driver-owners of the platform they serve with vested interest at their hearts. We are putting more 
+                money into your pockets.
+            </p>
+            <p>
+                At EaziRide, safety is in our genes, and it starts with every driver-owner. Our cutting-edge software 
+                and technology brings in breakthrough safety controls that are transforming ride sharing from a mere 
+                convenience to a trusted, secure and responsible choice.
+            </p>
+            <p>
+                Every driver-owner and rider are thoroughly verified before hopping on the platform.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column" id="footer-map">
+                <h4>Find Us @</h4>
+                <div id="map">
+                    <!-- Embed Google Maps here -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22812.91222799189!2d28.032653745017457!3d-26.11007818199954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950da936dbcf7d%3A0x6f4ae2d39f8770fa!2s145%20Second%20St%2C%20Parkmore%2C%20Sandton%2C%202196!5e0!3m2!1sen!2sza!4v1695151234593!5m2!1sen!2sza"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Become a Driver Owner</a></li>
+                    <li><a href="#">Ride With Us</a></li>
+                    <li><a href="#">Safety</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Our Statistics</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>145 Second Street<br>Parkmore, Sandton, 2196</p>
+                <p>Phone: (010) 055 3355</p>
+                <p>Email: info@eaziride.co.za</p>
+                <p>Follow Us: 
+                    <link href="#"><i class="fab fa-facebook"></i></link>
+                    <link href="#"><i class="fab fa-instagram"></i></link>
+                    <link href="#" class="social-icon"><i class="fab fa-twitter"></i></link>
+                    <link href="#"><i class="fab fa-linkedin"></i></link>
+                </p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>Made with ❤️ at <a href="https://gmnt-holdings.com">GMNT Holdings</a></p>
+        </div>
+    <script>
+        // Function to toggle the dropdown menu on click
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById('dropdown-content');
+            dropdownContent.classList.toggle('show');
+        }
+
+        // Close the dropdown menu if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                var dropdowns = document.getElementsByClassName('dropdown-content');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

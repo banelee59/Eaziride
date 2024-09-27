@@ -1,0 +1,1575 @@
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* Basic styles for the navbar */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown-content {
+        position: static;
+    }
+
+    .dropdown-btn {
+        width: 100%;
+    }
+}
+/* Navbar styles */
+nav {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+   
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin-left: 2rem; /* Adds space between logo and links */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 1rem; /* Adds spacing between navbar items */
+}
+
+
+/* Main content styling */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+}
+
+.left-content {
+    width: 50%;
+}
+
+.left-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.left-content p{
+    text-decoration: #0288D1;
+    color: #0435f9;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form button {
+    margin-bottom: 1rem;
+}
+
+form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 0.7rem;
+    font-size: 1rem;
+    background-color: #0288D1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.right-content {
+    width: 45%;
+}
+
+.right-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Login prompt */
+#login-prompt {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#login-prompt a {
+    color: #0288D1;
+    text-decoration:tomato;
+}
+/* Footer styles */
+footer {
+    background-color: #0288D1; /* Blue background */
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column p, .footer-column a {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a.social-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: white;
+}
+
+#map iframe {
+    border: 0;
+}
+
+/* Footer bottom styles */
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Add some responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Footer styles */
+.footer-left {
+    width: 50%;
+}
+
+#map {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info, .footer-contact {
+    margin-bottom: 1rem;
+}
+
+.footer-info ul {
+    list-style: none;
+}
+
+.footer-info ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-info ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact a {
+    color: #0288D1;
+    text-decoration: none;
+}
+/* About CSS*/
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.nav-list li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 10px 0;
+}
+
+/* Social Media Icons */
+.social-icon img {
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue background */
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.nav-list li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Driver Owner Section */
+.driver-owner {
+    padding: 50px 0;
+    background-color: #f0f8ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.info-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.info-card h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+/* Ride with Us*/
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue background */
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.nav-list li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Ride with Us Section */
+.ride-with-us {
+    padding: 50px 0;
+    background-color: #f0f8ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.info-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.info-card h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue background */
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.nav-list li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Safety Section */
+.safety-section {
+    padding: 50px 0;
+    background-color: #f0f8ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.info-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.info-card h3 {
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+  /* General modal styling */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    .toggle-password {
+        position: absolute;
+        top: 38px;
+        right: 10px;
+        cursor: pointer;
+    }
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Toggle icon for password visibility */
+
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Password error message styling */
+.error {
+    color: red;
+    display: none;
+    margin-top: 5px;
+}
+ /* Basic styling for the page */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the button to open the modal */
+.terms-btn {
+    background-color: #526af1;
+    
+    /*padding: 10px 20px;margin: 20px;*/
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.terms-btn:hover {
+    background-color: #3844a4;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    overflow-y: scroll; /* Scroll if content is too long */
+    position: relative;
+}
+
+/* Close button (x) */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Heading for the modal */
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Ensure the modal scrolls properly on small screens */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        height: 85%;
+    }
+}
+ /* Style for Agree/Decline buttons */
+ .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.agree-btn, .decline-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 15%;
+}
+
+.agree-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.agree-btn:hover {
+    background-color: #45a049;
+}
+
+.decline-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.decline-btn:hover {
+    background-color: #e53935;
+}
+
+/* Ensure the modal scrolls properly on small screens */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        height: 85%;
+    }
+}
+/* Style for the button to open the modal */
+.privacy-btn {
+    background-color: #2196F3;
+    color: white;
+   /* padding: 10px 20px;margin: 20px;*/
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+.privacy-btn:hover {
+    background-color: #0b7dda;
+}
+/* Index changes */
+ /* General page styling */
+ body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background section styling */
+.background-section {
+    background-image: url('./img/ehailing.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* E-hailing message styling */
+.e-hailing-message {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Add background with some opacity */
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
+}
+
+/* Button styling */
+.book-btn {
+    background-color: #2196F3;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.book-btn:hover {
+    background-color: #0b7dda;
+}
+
+/* Animation for button */
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation for message */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal styling for car booking */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    animation: scaleUp 0.5s ease-in-out; /* Animation for opening the modal */
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Close button for modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form styling */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: rgb(243, 8, 8);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+/* E-hailing Colors*/
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Primary and Secondary Colors */
+:root {
+    --electric-blue: #007BFF;
+    --soft-white: #F9FAFC;
+    --dark-navy: #1F2937;
+    --soft-gray: #E5E7EB;
+    --light-teal: #38B2AC;
+    --sunset-orange: #F97316;
+    --cool-gray: #9CA3AF;
+    --black: #111827;
+    --light-gray: #D1D5DB;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--soft-white);
+    color: var(--dark-navy);
+}
+
+/* Navbar */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    /*background-color: var(--dark-navy);*/
+    padding: 1em;
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: var(--soft-white);
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--electric-blue);
+}
+
+/* Hero Section */
+.hero {
+    height: 96vh;
+    background-image: url('./img/hailing.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(0, 123, 255, 0.7); 
+    padding: 3em;
+    text-align: left;
+    color: var(--soft-white);
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 12em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 3.2em;
+    margin-bottom: 0.5em;
+}
+
+.book-btn {
+    background-color: var(--electric-blue);
+    color: var(--soft-white);
+    padding: 0.8em 2em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: var(--light-teal);
+}
+
+/* Animation on Button Hover */
+.book-btn:hover {
+    animation: pulse 0.8s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--electric-blue);
+    color: var(--soft-white);
+    text-align: center;
+    padding: 1em;
+    font-size: 1em;
+   /* position: fixed;*/
+    bottom: 0;
+    width: 100%;
+}
+/* E-hailing AI Colors */
+:root {
+    --electric-blue: #007BFF;
+    --dark-navy: #1F2937;
+    --soft-white: #F9FAFC;
+    --light-teal: #38B2AC;
+    --soft-gray: #E5E7EB;
+    --cool-gray: #9CA3AF;
+}
+
+/* General Navbar Styling */
+header {
+    background-color:#007BFF;
+    padding: 1em 0;
+}
+
+.logo img {
+    width: 45px;
+    margin-left: 20px;
+}
+
+/* Navbar Links */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    color: var(--soft-white);
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    background-color: var(--electric-blue);
+    color: var(--soft-white);
+    border-radius: 5px;
+}
+
+/* Dropdown Button */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-btn {
+    background-color: var(--electric-blue);
+    color: var(--soft-white);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: var(--light-teal);
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-navy);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    min-width: 200px;
+}
+
+.dropdown-content a {
+    color: var(--soft-white);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--electric-blue);
+}
+
+/* Show the dropdown content on click */
+.show {
+    display: block;
+}
+
+/* Utility Classes */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 150px;
+   
+}
+/* Styling for hero section */
+.hero-section {
+    height: 100vh; /* Full viewport height */
+    background-image: url(''); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* Text color */
+    padding: 20px;
+}
+
+/* Hero content (message) styling */
+.hero-content {
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background for better readability */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Header styling */
+.hero-content h1 {
+    font-size: 3rem;
+    color: #004578; /* Deep Blue (e-hailing AI color) */
+}
+
+/* Paragraph styling */
+.hero-content p {
+    font-size: 1.25rem;
+    margin: 20px 0;
+    color: #99CCFF; /* Lighter blue */
+}
+
+/* Book a Ride button styling */
+.booking-btn {
+    background-color: #004578; /* Deep Blue */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.booking-btn:hover {
+    background-color: #FFBB33; /* Hover color from AI colors */
+}
+/* Styling for hero section */
+.hero-section {
+    height: 100vh; /* Full viewport height */
+    background-image: url(''); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* Text color */
+    padding: 20px;
+}
+
+/* Hero content (message) styling */
+.hero-content {
+    background: rgba(244, 239, 239, 0.263); /* Dark transparent background for better readability */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Header styling */
+.hero-content h1 {
+    font-size: 3rem;
+    color: #eb0d14; /* Deep Blue (e-hailing AI color) */
+}
+
+/* Paragraph styling */
+.hero-content p {
+    font-size: 1.25rem;
+    margin: 20px 0;
+    color: #1673d0; /* Lighter blue */
+}
+
+/* Book a Ride button styling */
+.booking-btn {
+    background-color: #004578; /* Deep Blue */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.booking-btn:hover {
+    background-color: #1638df; /* Hover color from AI colors */
+}
+
+/* App download buttons styling */
+.app-download {
+    margin-top: 20px;
+    background-color:#99CCFF;
+}
+
+.app-btn {
+    width: 150px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for app download buttons */
+.app-btn:hover {
+    transform: scale(1.1);
+}
+/* Footer Section */
+footer {
+    background-color: #048cee; /* Deep Blue from the AI palette */
+    color: #9c828258;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Footer container for the cards */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer card styles */
+.footer-card {
+    background-color: #eebdbdac; /* Use AI Orange color for the cards */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 250px; /* Ensure the card resizes on smaller screens */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Footer card hover effects */
+.footer-card:hover {
+    transform: translateY(-10px); /* Move card up slightly */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+/* Footer headings */
+.footer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #004578; /* Text color deep blue */
+}
+
+/* Paragraphs */
+.footer-card p {
+    margin: 10px 0;
+}
+
+/* Social media links list */
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin: 5px 0;
+}
+
+/* Social media links style */
+.social-links a {
+    color: #004578;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff0015; /* Lighter yellow on hover */
+}
+
+/* Support button styling */
+.support-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004578; /* Deep Blue */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.support-btn:hover {
+    background-color: #d41a1a; /* Orange color on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-card {
+        width: 100%; /* Stack cards on smaller screens */
+    }
+}
