@@ -66,9 +66,56 @@
   .contact-info, .contact-form {
     margin-bottom: 2rem;
   }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .md\:w-1/2 {
+    width: 100%;
+  }
 }
 
 .contact,
 .contact a {
   color: black;
+}
+
+.aspect-w-16 {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.aspect-w-16 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Add these styles to your existing Contact.css file */
+
+.fas {
+  font-size: 2rem;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+.hover\:bg-red-600:hover {
+  background-color: #dc2626;
 }

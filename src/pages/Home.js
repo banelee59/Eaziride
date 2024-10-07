@@ -75,7 +75,7 @@ function Home() {
         <Header />
         <div className="container mx-auto px-4 py-16 md:py-40 text-left relative z-10 flex-grow flex flex-col justify-left">
           <h1 className="text-2xl md:text-5xl font-bold mb-12">WELCOME TO <span className="text-red-500">EAZIRIDE</span></h1>
-          <p className="text-2xl md:text-2xl mb-12 animate-fade-in ">
+          <p className="text-2xl md:text-2xl mb-12 animate-fade-in text-italic">
           EaziRide, the innovative ride-sharing platform <p>Owned by drivers, loved by riders</p>
           Revolutionizing the e-hailing industry
           </p>
@@ -223,6 +223,33 @@ function Home() {
                   "/images/grow.jpg"
                 ]}
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Us Section */}
+      <div className="bg-gray-100 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Head Address</h3>
+              <p>136 2nd Street, Halfway House, Midrand, 1682</p>
+              
+              <h3 className="text-xl font-semibold mt-6 mb-4">Branch Office</h3>
+              <p>24 Flamengo Street, Waterfall view, Midrand, 1682</p>
+              
+              <h3 className="text-xl font-semibold mt-6 mb-4">Soweto Branch Office</h3>
+              <p>1147 Bhele Street, Zone 1, Pimville, 1809</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Email Us</h3>
+              <p>blessing.ningiza@gmail.com</p>
+              <p>blessing@mzingisi2success.co.za</p>
+              
+              <h3 className="text-xl font-semibold mt-6 mb-4">Call Us</h3>
+              <p>+27 82 836 4020</p>
             </div>
           </div>
         </div>
