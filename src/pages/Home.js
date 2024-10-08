@@ -230,7 +230,7 @@ function Home() {
 
 
       {/* Download App Section */}
-      <div className="bg-[#F44336] py-16 mb-40 rounded-lg ">ssssssssss
+      <div className="bg-[#F44336] py-16 mb-40 rounded-lg ">
         <div className="container mx-auto px-4">
           <div className="text-center text-white mb-12">
             <h3 className="text-3xl font-semibold mb-4">Download the App and Ride Today</h3>
