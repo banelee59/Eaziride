@@ -71,9 +71,7 @@
     flex-direction: column;
   }
 
-  .md\:w-1/2 {
-    width: 100%;
-  }
+
 }
 
 .contact,
