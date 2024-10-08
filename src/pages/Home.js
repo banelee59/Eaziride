@@ -127,7 +127,7 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: "EaziLite", image: "eazilite.svg" },
-              { title: "EaziComfortt", image: "eazicomfort.svg" },
+              { title: "EaziComfort", image: "eazicomfort.svg" },
               { title: "EaziLuxury", image: "eaziluxury.svg" },
               { title: "EaziVan", image: "eazivan.svg" },
               { title: "EaziWoman", image: "eaziwoman.svg" },
