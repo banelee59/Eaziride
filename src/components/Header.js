@@ -33,8 +33,8 @@ function Header() {
           {/* Desktop menu */}
           <nav className="hidden md:flex space-x-4">
             <Link to="/" className="text-white hover:text-red-500 transition duration-300">Home</Link>
-            <Link to="/about" className="text-white hover:text-red-500 transition duration-300">About</Link>
-            <Link to="/services" className="text-white hover:text-red-500 transition duration-300">Services</Link>
+            <Link to="/ride with us" className="text-white hover:text-red-500 transition duration-300">Ride With Us</Link>
+            <Link to="/become a driver" className="text-white hover:text-red-500 transition duration-300">Become a Driver</Link>
             <Link to="/contact" className="text-white hover:text-red-500 transition duration-300">Contact</Link>
           </nav>
         </div>
