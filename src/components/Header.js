@@ -44,8 +44,8 @@ function Header() {
           <nav className="md:hidden mt-4">
             <div className="flex flex-col space-y-2">
               <Link to="/" className="text-white hover:text-red-500 transition duration-300" onClick={toggleMenu}>Home</Link>
-              <Link to="/about" className="text-white hover:text-red-500 transition duration-300" onClick={toggleMenu}>About</Link>
-              <Link to="/services" className="text-white hover:text-red-500 transition duration-300" onClick={toggleMenu}>Services</Link>
+              <Link to="/ride with us" className="text-white hover:text-red-500 transition duration-300" onClick={toggleMenu}>ride with us</Link>
+              <Link to="/Become a Driver" className="text-white hover:text-red-500 transition duration-300" onClick={toggleMenu}>become a Driver</Link>
               <Link to="/contact" className="text-white hover:text-red-500 transition duration-300" onClick={toggleMenu}>Contact</Link>
             </div>
           </nav>
