@@ -12,7 +12,14 @@ function Header() {
     <header className="bg-transparent absolute top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-white text-2xl font-bold">EaziRide</Link>
+          <div className="flex items-center">
+            <img 
+              src={`${process.env.PUBLIC_URL}/images/eaziride-logo.png`} 
+              alt="EaziRide Logo" 
+              className="h-10 w-auto mr-2"
+            />
+            <Link to="/" className="text-white text-2xl font-bold"></Link>
+          </div>
           
           {/* Hamburger menu for mobile */}
           <div className="md:hidden">
