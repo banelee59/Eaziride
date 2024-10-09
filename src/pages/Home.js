@@ -100,14 +100,21 @@ function Home() {
             <img src={`${process.env.PUBLIC_URL}/images/hailing 2.jpg`} alt="About EaziRide" className="rounded-lg shadow-lg w-full h-auto" />
           </div>
           <div className="md:w-1/2 mb-8 md:mb-0 md:order-2 order-1 md:pl-8">
-            <h2 className="text-3xl font-bold mb-4">About Us</h2>
-            <p className="text-lg mb-4 text-black">EaziRide is a unique ride-sharing platform that aims to empower drivers by allowing them to become driver-owners of the platform. This means that they have a vested interest in the success of the platform and can put more money into their pockets. 
-          </p> 
-            <ul className=" list-inside mb-4 text-lg">
-              <li>Safety is a top priority at EaziRide, and our cutting-edge software and technology include breakthrough safety controls that transform ride sharing into a trusted, secure, and responsible choice.</li>
-              <li>Our focus on safety starts with every driver-owner, ensuring a safe experience for both drivers and passengers.</li>
-
-             
+            <h2 className="text-3xl font-bold mb-4">Key Features</h2>
+            <p className="text-lg mb-4 text-black">EaziRide is a unique ride-sharing platform that empowers drivers through ownership and prioritizes safety for all users.</p>
+            <ul className="space-y-4 mb-4 text-lg">
+              <li className="flex items-start">
+                <i className="fas fa-users-cog text-red-500 mr-3 mt-1"></i>
+                <span>Driver-owner model</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-shield-alt text-red-500 mr-3 mt-1"></i>
+                <span>Advanced safety measures</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <span>Comprehensive vetting</span>
+              </li>
             </ul>
             <Link to="/about" className="bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Discover More</Link>
           </div>
@@ -131,7 +138,10 @@ function Home() {
               { title: "EaziLuxury", image: "eaziluxury.svg" },
               { title: "EaziVan", image: "eazivan.svg" },
               { title: "EaziWoman", image: "eaziwoman.svg" },
-              { title: "EaziFoods", image: "eazifood.svg" }
+              { title: "EaziFoods", image: "eazifood.svg" },
+              { title: "EaziShuttle", image: "eazishuttle.svg" },
+              { title: "EaziPackage", image: "eaziPackage.svg" },
+              { title: "EaziFleet", image: "ezifleet.svg" },
             ].map((service, index) => (
               <div key={index} className="bg-white bg-opacity-90 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:transform hover:scale-105">
                 {service.image ? (
@@ -230,36 +240,41 @@ function Home() {
 
 
       {/* Download App Section */}
-      <div className="bg-[#F44336] py-16 mb-40 rounded-lg ">
+      <div className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center text-white mb-12">
-            <h3 className="text-3xl font-semibold mb-4">Download the App and Ride Today</h3>
-            <p className="text-xl max-w-2xl mx-auto">
-              EaziRide is available on both iOS and Android. Download now and experience a new way to move.
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row items-center justify-center space-x-80">
-            <div className="flex flex-col items-center mb-8 md:mb-0">
-              <a href="https://apps.apple.com/us/app/eaziride" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-300 mb-4 text-lg">
-                <i className="fab fa-apple mr-2"></i>App Store
-              </a>
-              <img 
-                src={`${process.env.PUBLIC_URL}/images/qrcode_localhost.png`} 
-                alt="EaziRide App Store QR Code" 
-                className="w-48 h-48 rounded-lg mb-2"
-              />
-              <p className="text-white font-semibold">App Store</p>
+          <h2 className="text-3xl font-bold text-center mb-12">Download the App and Ride Today</h2>
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
+            <div className="bg-white rounded-lg shadow-md p-8 flex flex-col justify-between max-w-sm w-full">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Available for iOS devices.</h3>
+                <p className="text-gray-600 mb-8"></p>
+              </div>
+              <div>
+                <a href="https://apps.apple.com/us/app/eaziride" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-300 inline-block mb-4 w-full text-center">
+                  <i className="fab fa-apple mr-2"></i>App Store
+                </a>
+                <img 
+                  src={`${process.env.PUBLIC_URL}/images/qrcode_localhost.png`} 
+                  alt="EaziRide App Store QR Code" 
+                  className="w-32 h-32 mx-auto"
+                />
+              </div>
             </div>
-            <div className="flex flex-col items-center">
-              <a href="https://play.google.com/store/apps/details?id=com.eaziride" target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300 mb-4 text-lg">
-                <i className="fab fa-google-play mr-2"></i>Google Play
-              </a>
-              <img 
-                src={`${process.env.PUBLIC_URL}/images/qrcode_localhost.png`} 
-                alt="EaziRide Google Play QR Code" 
-                className="w-48 h-48 rounded-lg mb-2"
-              />
-              <p className="text-white font-semibold">Google Play</p>
+            <div className="bg-white rounded-lg shadow-md p-8 flex flex-col justify-between max-w-sm w-full">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">Available for Android devices.</h3>
+                <p className="text-gray-600 mb-8"></p>
+              </div>
+              <div>
+                <a href="https://play.google.com/store/apps/details?id=com.eaziride" target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300 inline-block mb-4 w-full text-center">
+                  <i className="fab fa-google-play mr-2"></i>Google Play
+                </a>
+                <img 
+                  src={`${process.env.PUBLIC_URL}/images/qrcode_localhost.png`} 
+                  alt="EaziRide Google Play QR Code" 
+                  className="w-32 h-32 mx-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
