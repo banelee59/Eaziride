@@ -102,21 +102,21 @@ function Home() {
           <div className="md:w-1/2 mb-8 md:mb-0 md:order-2 order-1 md:pl-8">
             <h2 className="text-3xl font-bold mb-4">Key Features</h2>
             <p className="text-lg mb-4 text-black">EaziRide is a unique ride-sharing platform that empowers drivers through ownership and prioritizes safety for all users.</p>
-            <ul className="space-y-4 mb-4 text-lg">
+            <ul className="space-y-4 mb-8 text-lg">
               <li className="flex items-start">
-                <i className="fas fa-users-cog text-red-500 mr-3 mt-1"></i>
+                <i className="fas fa-users-cog text-red-500 mr-3 mt-1 text-xs"></i>
                 <span>Driver-owner model</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-shield-alt text-red-500 mr-3 mt-1"></i>
+                <i className="fas fa-shield-alt text-red-500 mr-3 mt-1 text-xs"></i>
                 <span>Advanced safety measures</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <i className="fas fa-check-circle text-red-500 mr-3 mt-1 text-xs"></i>
                 <span>Comprehensive vetting</span>
               </li>
             </ul>
-            <Link to="/about" className="bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Discover More</Link>
+            <Link to="/about" className="bg-red-500 mb-40 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Discover More</Link>
           </div>
         </div>
         
@@ -152,7 +152,7 @@ function Home() {
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl font-bold text-center mb-12 text-white">Our Best Services For You</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
               { title: "EaziLite", image: "eazilite.svg" },
               { title: "EaziComfort", image: "eazicomfort.svg" },
@@ -164,13 +164,13 @@ function Home() {
               { title: "EaziPackage", image: "eaziPackage.svg" },
               { title: "EaziFleet", image: "ezifleet.svg" },
             ].map((service, index) => (
-              <div key={index} className="bg-white bg-opacity-90 rounded-lg shadow-md p-4 text-center transition-transform duration-300 hover:transform hover:scale-105">
+              <div key={index} className="bg-white bg-opacity-90 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:transform hover:scale-105">
                 {service.image ? (
-                  <img src={`${process.env.PUBLIC_URL}/images/${service.image}`} alt={service.title} className="w-16 h-16 mx-auto mb-2" />
+                  <img src={`${process.env.PUBLIC_URL}/images/${service.image}`} alt={service.title} className="w-20 h-20 mx-auto mb-4" />
                 ) : (
-                  <i className={`fas ${service.icon} text-2xl text-red-500 mb-2`}></i>
+                  <i className={`fas ${service.icon} text-3xl text-red-500 mb-4`}></i>
                 )}
-                <h3 className="text-sm font-semibold">{service.title}</h3>
+                <h3 className="text-lg font-semibold">{service.title}</h3>
               </div>
             ))}
           </div>
