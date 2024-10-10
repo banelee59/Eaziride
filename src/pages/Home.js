@@ -36,7 +36,7 @@ function UserBox({ title, icon, items, images }) {
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    `${process.env.PUBLIC_URL}/images/hail.jpg`,
+    `${process.env.PUBLIC_URL}/images/landing.jpeg`,
     `${process.env.PUBLIC_URL}/images/ride.jpg`,
     `${process.env.PUBLIC_URL}/images/about.jpg`
   ];
@@ -119,6 +119,27 @@ function Home() {
             <Link to="/about" className="bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Discover More</Link>
           </div>
         </div>
+        
+        {/* Stats Section */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">EaziRide in Numbers</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            {[
+              { label: "Onboarded Drivers", value: "10,000+", icon: "fa-user-tie" },
+              { label: "Rejected Drivers", value: "500+", icon: "fa-user-times" },
+              { label: "Paid Out Earnings", value: "R5M+", icon: "fa-dollar-sign" },
+              { label: "Completed Trips", value: "1M+", icon: "fa-route" },
+              { label: "Onboarded Riders", value: "50,000+", icon: "fa-users" },
+              { label: "Rejected Riders", value: "100+", icon: "fa-user-slash" }
+            ].map((stat, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center">
+                <i className={`fas ${stat.icon} text-3xl text-red-500 mb-4`}></i>
+                <h3 className="text-2xl font-bold mb-2">{stat.value}</h3>
+                <p className="text-gray-600">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Services Section */}
@@ -131,7 +152,7 @@ function Home() {
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl font-bold text-center mb-12 text-white">Our Best Services For You</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { title: "EaziLite", image: "eazilite.svg" },
               { title: "EaziComfort", image: "eazicomfort.svg" },
@@ -143,14 +164,13 @@ function Home() {
               { title: "EaziPackage", image: "eaziPackage.svg" },
               { title: "EaziFleet", image: "ezifleet.svg" },
             ].map((service, index) => (
-              <div key={index} className="bg-white bg-opacity-90 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:transform hover:scale-105">
+              <div key={index} className="bg-white bg-opacity-90 rounded-lg shadow-md p-4 text-center transition-transform duration-300 hover:transform hover:scale-105">
                 {service.image ? (
-                  <img src={`${process.env.PUBLIC_URL}/images/${service.image}`} alt={service.title} className="size-52 mx-auto mb-4" />
+                  <img src={`${process.env.PUBLIC_URL}/images/${service.image}`} alt={service.title} className="w-16 h-16 mx-auto mb-2" />
                 ) : (
-                  <i className={`fas ${service.icon} text-4xl text-red-500 mb-4`}></i>
+                  <i className={`fas ${service.icon} text-2xl text-red-500 mb-2`}></i>
                 )}
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                
+                <h3 className="text-sm font-semibold">{service.title}</h3>
               </div>
             ))}
           </div>
