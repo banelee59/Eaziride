@@ -16,7 +16,7 @@ function SlidingStats() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentStatIndex((prevIndex) => (prevIndex + 1) % stats.length);
-    }, 5000); // Change stat every 5 seconds
+    }, 3000); // Change stat every 3 seconds
 
     return () => clearInterval(interval);
   }, []);

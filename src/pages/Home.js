@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import SlidingStats from '../components/SlidingStats';
 
 function UserBox({ title, icon, items, images }) {
   const [showImages, setShowImages] = useState(false);
@@ -91,6 +92,11 @@ function Home() {
         <button onClick={nextImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl z-20 hover:text-red-500 transition-colors duration-300">
           &#8250;
         </button>
+        
+        {/* SlidingStats positioned at the bottom right of the hero section */}
+        <div className="absolute bottom-4 right-4 z-30">
+          <SlidingStats />
+        </div>
       </div>
 
       {/* About Us Section */}
@@ -149,7 +155,7 @@ function Home() {
                 ) : (
                   <i className={`fas ${service.icon} text-3xl text-red-500 mb-4`}></i>
                 )}
-                <h3 className="text-lg font-semibold">{service.title}</h3>
+                <h3 className="text-lg font-semibold ">{service.title}</h3>
               </div>
             ))}
           </div>
@@ -157,86 +163,61 @@ function Home() {
       </div>
 
       {/* Why Choose Us Section */}
-      <div className="py-16 bg-cover bg-center relative" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/why-us.jpg)`}}>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl font-bold text-center mb-12 font-sans text-white">
+      <div className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-black">
             Why Choose Us
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { 
-                title: "Vetted Drivers- Know Who is Behind the Wheel", 
-                icon: "fa-id-card",
-                description: "Our system uses advanced controls to detect tampering, ensuring document authenticity. We prioritize uncovering fraudulently obtained registration documents."
-              },
-              { 
-                title: "Cars and drivers, you can trust", 
-                icon: "fa-car-side",
-                description: "We ensure we have updates on vehicle condition, passenger liability insurance, driver-owner criminal record, and more for a safe journey."
-              },
-              { 
-                title: "Prioritising Vehicle Safety", 
-                icon: "fa-tools",
-                description: "Our exceptional features simplify routine vehicle maintenance for driver-owners, ensuring trust with the rider community and preventing driving without an inspected car."
-              },
-              { 
-                title: "More Than a Ride", 
-                icon: "fa-mobile-alt",
-                description: "Our ride-sharing platform offers reasonably priced data and voice packages that let users stay in touch with friends and family."
-              }
-            ].map((feature, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="text-red-500 text-4xl mb-4">
-                  <i className={`fas ${feature.icon}`}></i>
-                </div>
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+          <div className="relative flex justify-center">
+            {/* Vertical line */}
+            <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-red-500 transform -translate-x-1/2"></div>
+            
+            <div className="flex w-full">
+              <div className="w-1/2 pr-8">
+                <img 
+                  src={`${process.env.PUBLIC_URL}/images/why-us.jpg`} 
+                  alt="Why Choose EaziRide" 
+                  className="rounded-lg shadow-lg w-full h-full object-cover"
+                />
               </div>
-            ))}
-          </div>
-          
-          <div className="mt-16 bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">EaziRide gets you there—fast, safe, and stress-free</h3>
-            <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4">
-              <UserBox 
-                title="For Riders"
-                icon="fa-user-friends"
-                items={[
-                  "User-friendly booking platform",
-                  "Vetted drivers and verified documents",
-                  "Enhanced safety features",
-                  "Competitive and transparent pricing",
-                  "Professional drivers in uniform"
-                ]}
-                images={[
-                  "/images/user-friendly.jpg",
-                  "/images/verted.jpg",
-                  "/images/affordable.jpg",
-                  "/images/uniform.jpg"
-                ]}
-              />
-              <UserBox 
-                title="For Drivers"
-                icon="fa-car"
-                items={[
-                  "High earning potential",
-                  "Daily payouts available",
-                  "Flexible working hours",
-                  "Dedicated driver support",
-                  "Opportunity for growth"
-                ]}
-                images={[
-                  "/images/fantasy.jpg",
-                  "/images/driver-support.jpg",
-                  "/images/grow.jpg"
-                ]}
-              />
+              <div className="space-y-16 w-1/2 pl-12 relative">
+                {[
+                  { 
+                    title: "Vetted Drivers",
+                    icon: "fa-id-card",
+                    description: "Our system uses advanced controls to detect tampering, ensuring document authenticity. We prioritize uncovering fraudulently obtained registration documents."
+                  },
+                  { 
+                    title: "Trusted Cars & Drivers",
+                    icon: "fa-car-side",
+                    description: "We ensure we have updates on vehicle condition, passenger liability insurance, driver-owner criminal record, and more for a safe journey."
+                  },
+                  { 
+                    title: "Vehicle Safety First",
+                    icon: "fa-tools",
+                    description: "Our exceptional features simplify routine vehicle maintenance for driver-owners, ensuring trust with the rider community and preventing driving without an inspected car."
+                  },
+                  { 
+                    title: "More Than a Ride",
+                    icon: "fa-mobile-alt",
+                    description: "Our ride-sharing platform offers reasonably priced data and voice packages that let users stay in touch with friends and family."
+                  }
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-start relative">
+                    <div className="pl-8">
+                      <h3 className="text-xl font-semibold text-black mb-2 flex items-center">
+                        <i className={`fas ${feature.icon} text-red-500 mr-3`}></i>
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm md:text-base">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-
 
       {/* Download App Section */}
       <div className="bg-gray-100 py-16">

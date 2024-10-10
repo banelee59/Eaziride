@@ -1,17 +1,14 @@
 .sliding-stats {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  z-index: 60;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 1rem; /* Increased from 0.8rem to 1rem */
 }
 
 .stat-content {
   display: inline-block;
-  animation: slideIn 0.5s ease-out, slideOut 0.5s ease-in 2.5s;
+  animation: fadeInOut 5s ease-in-out infinite;
 }
 
 .stat-label {
@@ -23,12 +20,7 @@
   color: #ef4444;
 }
 
-@keyframes slideIn {
-  from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideOut {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(100%); opacity: 0; }
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
 }
