@@ -102,27 +102,27 @@ function Home() {
           <div className="md:w-1/2 mb-8 md:mb-0 md:order-2 order-1 md:pl-8">
             <h2 className="text-3xl font-bold mb-4">Key Features</h2>
             <p className="text-lg mb-4 text-black">EaziRide is a unique ride-sharing platform that empowers drivers through ownership and prioritizes safety for all users.</p>
-            <ul className="space-y-4 mb-8 text-lg">
+            <ul className="space-y-4 mb-20 text-lg">
               <li className="flex items-start">
-                <i className="fas fa-users-cog text-red-500 mr-3 mt-1 text-xs"></i>
+                <i className="fas fa-users-cog text-red-500 mr-3 mt-1" style={{ fontSize: '1rem' }}></i>
                 <span>Driver-owner model</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-shield-alt text-red-500 mr-3 mt-1 text-xs"></i>
+                <i className="fas fa-shield-alt text-red-500 mr-3 mt-1" style={{ fontSize: '1rem' }}></i>
                 <span>Advanced safety measures</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-check-circle text-red-500 mr-3 mt-1 text-xs"></i>
+                <i className="fas fa-check-circle text-red-500 mr-3 mt-1" style={{ fontSize: '1rem' }}></i>
                 <span>Comprehensive vetting</span>
               </li>
             </ul>
-            <Link to="/about" className="bg-red-500 mb-40 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Discover More</Link>
+            <Link to="/about" className="mb-12 bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Discover More</Link>
           </div>
         </div>
         
         {/* Stats Section */}
         <div className="mt-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">EaziRide in Numbers</h2>
+          <h2 className="text-3xl font-bold mb-20 text-center">EaziRide in Numbers</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
               { label: "Onboarded Drivers", value: "10,000+", icon: "fa-user-tie" },
@@ -132,7 +132,10 @@ function Home() {
               { label: "Onboarded Riders", value: "50,000+", icon: "fa-users" },
               { label: "Rejected Riders", value: "100+", icon: "fa-user-slash" }
             ].map((stat, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center">
+              <div 
+                key={index} 
+                className="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105"
+              >
                 <i className={`fas ${stat.icon} text-3xl text-red-500 mb-4`}></i>
                 <h3 className="text-2xl font-bold mb-2">{stat.value}</h3>
                 <p className="text-gray-600">{stat.label}</p>
