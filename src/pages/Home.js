@@ -160,7 +160,7 @@ function Home() {
               { title: "EaziVan", image: "eazivan.svg" },
               { title: "EaziWoman", image: "eaziwoman.svg" },
               { title: "EaziFoods", image: "eazifood.svg" },
-              { title: "EaziShuttle", image: "eazishuttle.svg" },
+              { title: "EaziShuttle", image: "eaziShuttle.svg" },
               { title: "EaziPackage", image: "eaziPackage.svg" },
               { title: "EaziFleet", image: "ezifleet.svg" },
             ].map((service, index) => (
