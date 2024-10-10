@@ -36,7 +36,7 @@ function UserBox({ title, icon, items, images }) {
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    `${process.env.PUBLIC_URL}/images/landing.jpeg`,
+    `${process.env.PUBLIC_URL}/images/landing-image.jpg`,
     `${process.env.PUBLIC_URL}/images/ride.jpg`,
     `${process.env.PUBLIC_URL}/images/about.jpg`
   ];
