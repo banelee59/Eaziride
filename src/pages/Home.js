@@ -120,31 +120,7 @@ function Home() {
           </div>
         </div>
         
-        {/* Stats Section */}
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold mb-20 text-center">EaziRide in Numbers</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-            {[
-              { label: "Onboarded Drivers", value: "10,000+", icon: "fa-user-tie" },
-              { label: "Rejected Drivers", value: "500+", icon: "fa-user-times" },
-              { label: "Paid Out Earnings", value: "R5M+", icon: "fa-dollar-sign" },
-              { label: "Completed Trips", value: "1M+", icon: "fa-route" },
-              { label: "Onboarded Riders", value: "50,000+", icon: "fa-users" },
-              { label: "Rejected Riders", value: "100+", icon: "fa-user-slash" }
-            ].map((stat, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-lg shadow-md p-6 text-center transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105"
-              >
-                <i className={`fas ${stat.icon} text-3xl text-red-500 mb-4`}></i>
-                <h3 className="text-2xl font-bold mb-2">{stat.value}</h3>
-                <p className="text-gray-600">{stat.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
-      </div>
-
       {/* Services Section */}
       <div 
         className="bg-cover bg-center py-16 relative"

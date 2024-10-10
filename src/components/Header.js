@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SlidingStats from './SlidingStats';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +11,7 @@ function Header() {
 
   return (
     <header className="bg-transparent absolute top-0 left-0 right-0 z-50">
+      <SlidingStats />
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
