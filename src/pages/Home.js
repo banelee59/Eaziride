@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import SlidingStats from '../components/SlidingStats';
+
 
 function UserBox({ title, icon, items, images }) {
   const [showImages, setShowImages] = useState(false);
@@ -93,17 +93,14 @@ function Home() {
           &#8250;
         </button>
         
-        {/* SlidingStats positioned at the bottom right of the hero section */}
-        <div className="absolute bottom-4 right-4 z-30">
-          <SlidingStats />
-        </div>
+        
       </div>
 
       {/* About Us Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 md:order-1 order-2">
-            <img src={`${process.env.PUBLIC_URL}/images/hailing 2.jpg`} alt="About EaziRide" className="rounded-lg shadow-lg w-full h-auto" />
+            <img src={`${process.env.PUBLIC_URL}/images/for riders.jpg`} alt="About EaziRide" className="rounded-lg shadow-lg w-full h-auto" />
           </div>
           <div className="md:w-1/2 mb-8 md:mb-0 md:order-2 order-1 md:pl-8">
             <h2 className="text-3xl font-bold mb-4">Key Features</h2>

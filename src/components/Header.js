@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SlidingStats from './SlidingStats';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,11 +15,14 @@ function Header() {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src={`${process.env.PUBLIC_URL}/images/eaziride-logo.png`} 
+              src={`${process.env.PUBLIC_URL}/images/eaziride-driver2.png`} 
               alt="EaziRide Logo" 
-              className="h-10 w-auto mr-2"
+              className="h-16 w-auto mr-2"
             />
             <Link to="/" className="text-white text-2xl font-bold"></Link>
+            <div className="ml-4">
+              <SlidingStats />
+            </div>
           </div>
           
           {/* Hamburger menu for mobile */}
