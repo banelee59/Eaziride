@@ -3,12 +3,25 @@
   color: white;
   padding: 8px 12px;
   border-radius: 4px;
-  font-size: 1rem; /* Increased from 0.8rem to 1rem */
+  font-size: 1rem;
+  min-width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .stat-content {
-  display: inline-block;
-  animation: fadeInOut 5s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.stat-content.transitioning {
+  opacity: 0;
 }
 
 .stat-label {
@@ -22,5 +35,5 @@
 
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; }
-  20%, 80% { opacity: 1; }
+  10%, 90% { opacity: 1; }
 }

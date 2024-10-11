@@ -12,18 +12,23 @@ const stats = [
 
 function SlidingStats() {
   const [currentStatIndex, setCurrentStatIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentStatIndex((prevIndex) => (prevIndex + 1) % stats.length);
-    }, 3000); // Change stat every 3 seconds
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentStatIndex((prevIndex) => (prevIndex + 1) % stats.length);
+        setIsTransitioning(false);
+      }, 500); // Half of the transition time
+    }, 5000); // Change stat every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="sliding-stats">
-      <div className="stat-content">
+      <div className={`stat-content ${isTransitioning ? 'transitioning' : ''}`}>
         <span className="stat-label">{stats[currentStatIndex].label}:</span>
         <span className="stat-value">{stats[currentStatIndex].value}</span>
       </div>
