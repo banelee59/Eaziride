@@ -36,9 +36,10 @@ function UserBox({ title, icon, items, images }) {
 
 function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
+  const [showSafetyPopup, setShowSafetyPopup] = useState(false);
   const images = [
     `${process.env.PUBLIC_URL}/images/hail.jpg`,
-    `${process.env.PUBLIC_URL}/images/ride.jpg`,
     `${process.env.PUBLIC_URL}/images/about.jpg`
   ];
 
@@ -54,6 +55,14 @@ function Home() {
     const interval = setInterval(nextImage, 10000); // Change image every 5 seconds
     return () => clearInterval(interval);
   }, []);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
+  const toggleSafetyPopup = () => {
+    setShowSafetyPopup(!showSafetyPopup);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -74,15 +83,16 @@ function Home() {
         ))}
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <Header />
-        <div className="container mx-auto px-4 py-16 md:py-40 text-left relative z-10 flex-grow flex flex-col justify-left">
-          <h1 className="text-2xl md:text-5xl font-bold mb-12">WELCOME TO <span className="text-red-500">EAZIRIDE</span></h1>
-          <p className="text-2xl md:text-2xl mb-12 animate-fade-in text-italic">
-          EaziRide, the innovative ride-sharing platform <p>Owned by drivers, loved by riders</p>
-          Revolutionizing the e-hailing industry
-          </p>
-          <div className="flex justify-left space-x-4">
-            <Link to="/about" className="bg-red-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-600 transition duration-300">About More</Link>
-            <Link to="/services" className="bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300">Learn More</Link>
+        <div className="container mx-auto px-4 relative z-10 flex-grow flex flex-col justify-end pb-16"> {/* Changed to justify-end and added pb-16 */}
+          <div className="max-w-2xl"> {/* Added a max-width container */}
+            <h1 className="text-2xl md:text-4xl font-bold mb-20">AN E-HAILING <span className="text-red-500">REVOLUTION IS HERE</span></h1>
+            <p className="text-lg md:text-xl mb-8 animate-fade-in">
+              EaziRide - the first ever ride-sharing platform that is owned by drivers revolutionizes e-hailing industry and re-invents every riding experience.
+            </p>
+            <div className="flex space-x-4">
+              <Link to="/about" className="bg-red-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-600 transition duration-300">Join Revolution</Link>
+              <button onClick={toggleSafetyPopup} className="bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300">Our Safety Features</button>
+            </div>
           </div>
         </div>
         {/* Navigation Arrows */}
@@ -104,26 +114,34 @@ function Home() {
           </div>
           <div className="md:w-1/2 mb-8 md:mb-0 md:order-2 order-1 md:pl-8">
             <h2 className="text-3xl font-bold mb-4">Key Features</h2>
-            <p className="text-lg mb-4 text-black">EaziRide is a unique ride-sharing platform that empowers drivers through ownership and prioritizes safety for all users.</p>
+            <p className="text-lg mb-4 text-black">Re-inventing every ride sharing experience by introducing our first three ground-breaking safety features and bringing back trust in the e-hailing industry.</p>
             <ul className="space-y-4 mb-20 text-lg">
               <li className="flex items-start">
-                <i className="fas fa-users-cog text-red-500 mr-3 mt-1" style={{ fontSize: '1rem' }}></i>
-                <span>Driver-owner model</span>
+                <i className="fas fa-user-shield text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <span>Drivers and Riders Verification</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-shield-alt text-red-500 mr-3 mt-1" style={{ fontSize: '1rem' }}></i>
-                <span>Advanced safety measures</span>
+                <i className="fas fa-fingerprint text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <span>One-Profile-One-Driver (OPOD)</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-check-circle text-red-500 mr-3 mt-1" style={{ fontSize: '1rem' }}></i>
-                <span>Comprehensive vetting</span>
+                <i className="fas fa-camera text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <span>Selfie-Of-The-Moment (SOTM)</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-sync-alt text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <span>Selfie-Swap (SSW)</span>
+              </li>
+              <li className="flex items-start">
+                <i className="fas fa-trash-alt text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <span>Auto-Selfie Deletion</span>
               </li>
             </ul>
-            <Link to="/about" className="mb-12 bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Discover More</Link>
+            <button onClick={togglePopup} className="mb-12 bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Learn More</button>
           </div>
         </div>
-        
-        </div>
+      </div>
+
       {/* Services Section */}
       <div 
         className="bg-cover bg-center py-16 relative"
@@ -134,25 +152,47 @@ function Home() {
         <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl font-bold text-center mb-12 text-white">Our Best Services For You</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {[
-              { title: "EaziLite", image: "eazilite.svg" },
-              { title: "EaziComfort", image: "eazicomfort.svg" },
-              { title: "EaziLuxury", image: "eaziluxury.svg" },
-              { title: "EaziVan", image: "eazivan.svg" },
-              { title: "EaziWoman", image: "eaziwoman.svg" },
-              { title: "EaziFoods", image: "eazifood.svg" },
-              { title: "EaziShuttle", image: "eaziShuttle.svg" },
-              { title: "EaziPackage", image: "eaziPackage.svg" },
-              { title: "EaziFleet", image: "ezifleet.svg" },
+              { title: "EaziLite", image: "eazilite.svg", 
+                description: "Our entry-level ride class that comfortably seats up to 3 passengers" },
+
+              { title: "EaziComfort", image: "eazicomfort.svg", 
+                description: "Premium travel with our spacious ride for up to 4 passengers" },
+
+              { title: "EaziLuxury", image: "eaziluxury.svg", 
+                description: "Top-tier ride class featuring high-end vehicles for up to 4 passengers, where every journey becomes an unforgettable adventure!" },
+
+              { title: "EaziVan", image: "eazivan.svg", 
+                description: "Roomy transport for up to 8 passengers or bulky items, perfect for group outings or moving day" },
+
+              { title: "EaziWoman", image: "eaziwoman.svg", 
+                description: "A premium class connecting any rider with female drivers for a secure and empowering ride experience. Only available on EaziComfort, EaziLuxury & EaziVan." },
+
+              { title: "EaziFoods", image: "eazifood.svg",
+                 description: "Swift and reliable food delivery from your favourite local restaurants right to your doorstep." },
+
+              { title: "EaziShuttle", image: "eaziShuttle.svg", 
+                description: "Our efficient ride-sharing service for daily work or school trips." },
+
+              { title: "EaziPackage", image: "eaziPackage.svg",
+
+                 description: "Swift and secure delivery at your fingertips, ensuring your items reach their destination safely and on time!. Let's go as far as here" },
+
+              { title: "DuoDrive/SwapNDrive", image: "ezifleet.svg",
+                 description: "Tired? Tipsy? We'll drive you and your car home safely-anytime, anywhere. Your break, our wheel!." },
+                 
             ].map((service, index) => (
-              <div key={index} className="bg-white bg-opacity-90 rounded-lg shadow-md p-6 text-center transition-transform duration-300 hover:transform hover:scale-105">
-                {service.image ? (
-                  <img src={`${process.env.PUBLIC_URL}/images/${service.image}`} alt={service.title} className="w-20 h-20 mx-auto mb-4" />
-                ) : (
-                  <i className={`fas ${service.icon} text-3xl text-red-500 mb-4`}></i>
-                )}
-                <h3 className="text-lg font-semibold ">{service.title}</h3>
+              <div key={index} className="bg-white bg-opacity-95 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-bold text-gray-800">{service.title}</h3>
+                    {service.image && (
+                      <img src={`${process.env.PUBLIC_URL}/images/${service.image}`} alt={service.title} className="w-40 h-40" />
+                    )}
+                  </div>
+                  <p className="text-sm text-gray-600">{service.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -256,6 +296,92 @@ function Home() {
           </div>
         </div>
       </div>
+
+      {/* Safety Features Pop-up */}
+      {showSafetyPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 animate-fadeIn">
+          <div className="bg-gradient-to-br from-white to-gray-100 rounded-lg max-w-4xl w-full mx-4 my-4 flex flex-col max-h-[90vh] shadow-2xl animate-scaleIn">
+            <div className="p-8 overflow-y-auto flex-grow">
+              <h2 className="text-4xl font-bold mb-8 text-center text-red-600 animate-slideInDown">Our Safety Features</h2>
+              <div className="space-y-10">
+                {[
+                  {
+                    icon: "fa-user-shield",
+                    color: "green",
+                    title: "Drivers and Riders Verification",
+                    description: "Seamless and comprehensive screening of every driver and rider before onboarded into our ecosystem."
+                  },
+                  {
+                    icon: "fa-fingerprint",
+                    color: "blue",
+                    title: "One-Profile-One-Driver (OPOD)",
+                    description: "Goodbye profile renting, hello unparalleled trust in every ride. Our cutting-edge facial recognition instantly verify drivers, ensuring your safety is our top priority—one face at a time."
+                  },
+                  {
+                    icon: "fa-camera-retro",
+                    color: "yellow",
+                    title: "Selfie-Of-The-Moment (SOTM)",
+                    description: "Start every ride with a smile! With our Selfie-Of-The-Moment (SOTM) feature, riders are prompted to take a selfie before the journey begins, and drivers do the same before heading to the pick-up point. We are taking safety to the next level."
+                  },
+                  {
+                    icon: "fa-sync-alt",
+                    color: "purple",
+                    title: "Selfie-Swap (SSW)",
+                    description: "Automated exchange of selfies, ensuring a safe journey every step of the way. Snap your way to peace of mind and let the adventure begin."
+                  },
+                  {
+                    icon: "fa-shield-alt",
+                    color: "red",
+                    title: "Auto-Selfie Deletion",
+                    description: "Safety first, privacy always! Your Selfie-Of-The-Moment vanishes like magic once your ride ends, leaving no digital footprint behind. Adhering to data privacy is key to us."
+                  }
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-start bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-slideInRight" style={{animationDelay: `${index * 0.1}s`}}>
+                    <div className={`flex-shrink-0 w-16 h-16 bg-${feature.color}-100 rounded-full flex items-center justify-center mr-6`}>
+                      <i className={`fas ${feature.icon} text-3xl text-${feature.color}-600`}></i>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-3 text-gray-800">{feature.title}</h3>
+                      <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-10 font-semibold text-center text-xl text-blue-600 animate-pulse">Brace yourself for more safety features.</p>
+            </div>
+            <div className="p-6 border-t border-gray-200">
+              <button 
+                onClick={toggleSafetyPopup}
+                className="w-full bg-red-500 text-white font-semibold py-3 px-6 rounded-full hover:bg-red-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Existing About Us Pop-up */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-8 rounded-lg max-w-2xl w-full mx-4">
+            <h2 className="text-3xl font-bold mb-4">About Us</h2>
+            <p className="text-lg mb-6">
+              EaziRide is not just another ride-sharing platform. It is a movement that empowers 
+              drivers to become driver-owners of the platform they serve with vested interest. 
+              We are putting safety first, profits after. Our cutting-edge technology has 
+              breakthrough safety controls that are transforming ride sharing from a mere 
+              convenience to a trusted ecosystem.
+            </p>
+            <button 
+              onClick={togglePopup}
+              className="bg-red-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

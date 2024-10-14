@@ -1,0 +1,25 @@
+.earn-100-profits {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.earn-100-profits h1 {
+  color: #e53e3e;
+}
+
+.earn-100-profits h2 {
+  color: #2d3748;
+}
+
+.earn-100-profits p, .earn-100-profits li {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.earn-100-profits ul, .earn-100-profits ol {
+  margin-bottom: 1rem;
+}
+
+.earn-100-profits li {
+  margin-bottom: 0.5rem;
+}
