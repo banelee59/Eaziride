@@ -104,7 +104,7 @@ function Home() {
             <img src={`${process.env.PUBLIC_URL}/images/for riders.jpg`} alt="About EaziRide" className="rounded-lg shadow-lg w-full h-auto" />
           </div>
           <div className="md:w-1/2 mb-8 md:mb-0 md:order-2 order-1 md:pl-8">
-            <h2 className="text-3xl font-bold mb-4">Key Features</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">Our Safety Features</h2>
             <p className="text-lg mb-4 text-black">Re-inventing every ride sharing experience by introducing our first three ground-breaking safety features and bringing back trust in the e-hailing industry.</p>
             <ul className="space-y-4 mb-20 text-lg">
               <li className="flex items-start">
