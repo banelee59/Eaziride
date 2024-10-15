@@ -1,0 +1,19 @@
+.support-page {
+  background-color: #f8f9fa;
+}
+
+.support-page h1 {
+  color: #333;
+}
+
+.support-page input::placeholder {
+  color: white;
+}
+
+.support-page .grid > div {
+  transition: all 0.3s ease;
+}
+
+.support-page .grid > div:hover {
+  transform: translateY(-5px);
+}

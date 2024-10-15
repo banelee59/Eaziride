@@ -1,25 +1,47 @@
 .earn-100-profits {
-  background-color: #f8f9fa;
+  background-color: #1a202c;
   min-height: 100vh;
+  color: white;
 }
 
 .earn-100-profits h1 {
   color: #e53e3e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .earn-100-profits h2 {
   color: #2d3748;
+  position: relative;
+  display: inline-block;
+}
+
+.earn-100-profits h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 3px;
+  background-color: #f56565;
 }
 
 .earn-100-profits p, .earn-100-profits li {
   color: #4a5568;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .earn-100-profits ul, .earn-100-profits ol {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .earn-100-profits li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.earn-100-profits .container > div {
+  transition: all 0.3s ease;
+}
+
+.earn-100-profits .container > div:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 }

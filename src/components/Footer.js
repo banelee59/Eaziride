@@ -16,6 +16,7 @@ function Footer() {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/Earn-100-Profits">Earn 100% Profits</Link></li>
+              <li><Link to="/support">Support</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>

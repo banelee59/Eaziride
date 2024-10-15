@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import DriverOwner from './pages/DriverOwner';
 import Contact from './pages/Contact';
 import Earn100Profits from './pages/Earn100Profits';
+import Support from './pages/Support';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/driver-owner" element={<DriverOwner />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/support" element={<Support />} />
             <Route path="/earn-100-profits" element={<Earn100Profits />} />
           </Routes>
         </main>

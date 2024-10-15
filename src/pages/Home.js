@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import MovingText from '../components/MovingText';
+import './Home.css'; // Make sure to create this file for custom styles
 
 
 function UserBox({ title, icon, items, images }) {
@@ -43,18 +45,13 @@ function Home() {
     `${process.env.PUBLIC_URL}/images/about.jpg`
   ];
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
 
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  useEffect((flip) => {
-    const interval = setInterval(nextImage, 10000); // Change image every 5 seconds
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
@@ -66,44 +63,38 @@ function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Hero Section with exploding background */}
-      <div 
-        className="bg-cover bg-center text-white relative min-h-screen flex flex-col overflow-hidden"
-      >
-        {images.map((img, index) => (
+      <Header />
+      <MovingText />
+      {/* Hero Section with fading background */}
+      <div className="relative h-screen overflow-hidden">
+        {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out ${
-              index === currentImageIndex 
-                ? 'opacity-100 scale-100' 
-                : 'opacity-0 scale-150'
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ backgroundImage: `url(${img})` }}
+            style={{ backgroundImage: `url(${image})` }}
           ></div>
         ))}
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <Header />
-        <div className="container mx-auto px-4 relative z-10 flex-grow flex flex-col justify-end pb-16"> {/* Changed to justify-end and added pb-16 */}
-          <div className="max-w-2xl"> {/* Added a max-width container */}
-            <h1 className="text-2xl md:text-4xl font-bold mb-20">AN E-HAILING <span className="text-red-500">REVOLUTION IS HERE</span></h1>
-            <p className="text-lg md:text-xl mb-8 animate-fade-in">
+        <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-end pb-16">
+          <div className="max-w-2xl">
+            <h1 className="home-title text-4xl md:text-5xl font-bold mb-4 text-white">
+              An <span className="text-red-500">E-Hailing</span> Revolution Is Here
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-white">
               EaziRide - the first ever ride-sharing platform that is owned by drivers revolutionizes e-hailing industry and re-invents every riding experience.
             </p>
             <div className="flex space-x-4">
-              <Link to="/about" className="bg-red-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-600 transition duration-300">Join Revolution</Link>
-              <button onClick={toggleSafetyPopup} className="bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300">Our Safety Features</button>
+              <Link to="/about" className="bg-red-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-600 transition duration-300">
+                Join Revolution
+              </Link>
+              <button onClick={toggleSafetyPopup} className="bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
+                Our Safety Features
+              </button>
             </div>
           </div>
         </div>
-        {/* Navigation Arrows */}
-        <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl z-20 hover:text-red-500 transition-colors duration-300">
-          &#8249;
-        </button>
-        <button onClick={nextImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl z-20 hover:text-red-500 transition-colors duration-300">
-          &#8250;
-        </button>
-        
-        
       </div>
 
       {/* About Us Section */}

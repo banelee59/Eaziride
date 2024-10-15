@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import SlidingStats from './SlidingStats';
+
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,10 +19,7 @@ function Header() {
               alt="EaziRide Logo" 
               className="h-16 w-auto mr-2"
             />
-            <Link to="/" className="text-white text-2xl font-bold"></Link>
-            <div className="ml-4">
-              <SlidingStats />
-            </div>
+            
           </div>
           
           {/* Hamburger menu for mobile */}
@@ -38,6 +35,7 @@ function Header() {
           <nav className="hidden md:flex space-x-4">
             <Link to="/" className="text-white hover:text-red-500 transition duration-300">Home</Link>
             <Link to="/earn-100-profits" className="text-white hover:text-red-500 transition duration-300">Earn 100% Profits</Link>
+            <Link to="/support" className="text-white hover:text-red-500 transition duration-300">Support</Link>
             <Link to="/contact" className="text-white hover:text-red-500 transition duration-300">Contact</Link>
           </nav>
         </div>
