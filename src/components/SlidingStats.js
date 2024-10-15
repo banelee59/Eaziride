@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './SlidingStats.css';
 
 const stats = [
@@ -11,26 +11,20 @@ const stats = [
 ];
 
 function SlidingStats() {
-  const [currentStatIndex, setCurrentStatIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentStatIndex((prevIndex) => (prevIndex + 1) % stats.length);
-        setIsTransitioning(false);
-      }, 500); // Half of the transition time
-    }, 5000); // Change stat every 5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="sliding-stats">
-      <div className={`stat-content ${isTransitioning ? 'transitioning' : ''}`}>
-        <span className="stat-label">{stats[currentStatIndex].label}:</span>
-        <span className="stat-value">{stats[currentStatIndex].value}</span>
+      <div className="sliding-stats-content">
+        {stats.map((stat, index) => (
+          <span key={index} className="stat-item">
+            <strong>{stat.label}:</strong> {stat.value}
+          </span>
+        ))}
+        {/* Duplicate the stats to create a seamless loop */}
+        {stats.map((stat, index) => (
+          <span key={`duplicate-${index}`} className="stat-item">
+            <strong>{stat.label}:</strong> {stat.value}
+          </span>
+        ))}
       </div>
     </div>
   );

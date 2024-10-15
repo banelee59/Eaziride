@@ -7,7 +7,7 @@
 }
 
 .support-page input::placeholder {
-  color: white;
+  color: #aaa;
 }
 
 .support-page .grid > div {
