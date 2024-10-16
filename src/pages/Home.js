@@ -77,7 +77,7 @@ function Home() {
           ></div>
         ))}
         {/* Adjust the opacity here */}
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div className="absolute inset-0 bg-black opacity-70"></div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-end pb-16">
           <div className="max-w-2xl">
             <h1 className="home-title text-4xl md:text-4xl font-bold mb-12 text-white">

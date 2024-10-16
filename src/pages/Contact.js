@@ -6,9 +6,9 @@ function Contact() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-36">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-4xl font-bold mb-4 text-black">Contact Us</h1>
           <nav className="text-gray-500">
             <ol className="list-none p-0 inline-flex">
               <li className="flex items-center">
