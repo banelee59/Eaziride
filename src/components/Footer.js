@@ -28,16 +28,16 @@ function Footer() {
           <div className="footer-section">
             <h3>Follow Us</h3>
             <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://facebook.com" target="https://www.facebook.com/profile.php?id=61554108308817&mibextid=ZbWKwL" rel="noopener noreferrer">
                 <i className="fab fa-facebook"></i> 
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com" target="https://x.com/EaziRide_za?t=YxG2PnpEHyCRaIknkjkYRw&s=09" rel="noopener noreferrer">
                 <i className="fab fa-twitter"></i> 
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com" target="https://www.instagram.com/eaziride_za?igsh=MzRlODBiNWFlZA==" rel="noopener noreferrer">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://tiktok.com" target="https://www.tiktok.com/@eaziride_za?_t=8qamAcAYhja&_r=1" rel="noopener noreferrer">
                 <i className="fab fa-tiktok"></i>
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
