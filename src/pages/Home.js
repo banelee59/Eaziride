@@ -76,10 +76,11 @@ function Home() {
             style={{ backgroundImage: `url(${image})` }}
           ></div>
         ))}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        {/* Adjust the opacity here */}
+        <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-end pb-16">
           <div className="max-w-2xl">
-            <h1 className="home-title text-4xl md:text-5xl font-bold mb-4 text-white">
+            <h1 className="home-title text-4xl md:text-4xl font-bold mb-12 text-white">
               An <span className="text-red-500">E-Hailing</span> Revolution Is Here
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white">
@@ -250,7 +251,7 @@ function Home() {
       {/* Download App Section */}
       <div className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Download the App and Ride Today</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">Download the App and Ride Today</h2>
           <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
             <div className="bg-white rounded-lg shadow-md p-8 flex flex-col justify-between max-w-sm w-full">
               <div>
@@ -297,13 +298,13 @@ function Home() {
               <div className="space-y-10">
                 {[
                   {
-                    icon: "fa-user-shield",
+                    icon: "fa-fingerprint ",
                     color: "green",
                     title: "Drivers and Riders Verification",
                     description: "Seamless and comprehensive screening of every driver and rider before onboarded into our ecosystem."
                   },
                   {
-                    icon: "fa-fingerprint",
+                    icon: "fa-user-shield",
                     color: "blue",
                     title: "One-Profile-One-Driver (OPOD)",
                     description: "Goodbye profile renting, hello unparalleled trust in every ride. Our cutting-edge facial recognition instantly verify drivers, ensuring your safety is our top priority—one face at a time."

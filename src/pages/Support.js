@@ -47,7 +47,7 @@ function Support() {
     {
       icon: "fa-shield-alt",
       title: "Safety & Security",
-      items: ["Report a safety issue", "COVID-19 safety measures", "Privacy concerns", "Emergency assistance"]
+      items: ["Report a safety issue", "Privacy concerns", "Emergency assistance"]
     },
     {
       icon: "fa-mobile-alt",

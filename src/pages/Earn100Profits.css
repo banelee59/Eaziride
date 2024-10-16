@@ -5,7 +5,7 @@
 }
 
 .hero-section {
-  background-color: #000;
+  background-color: blue;
   color: #fff;
   padding: 80px 0;
 }
@@ -30,40 +30,74 @@ h1, h2 {
   background-color: #f2f2f2;
 }
 
-.feature-card {
-  background-color: #000;
-  color: #fff;
-  padding: 24px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-}
-
 .process-steps {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding: 20px 0;
+}
+
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000;
+  z-index: 1;
 }
 
 .process-step {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  width: 18%;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .step-number {
   background-color: #000;
   color: #fff;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.step-content {
+  text-align: center;
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.step-description {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .benefit-list {

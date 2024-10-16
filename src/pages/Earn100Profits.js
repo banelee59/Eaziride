@@ -2,20 +2,14 @@ import React from 'react';
 import Header from '../components/Header';
 import './Earn100Profits.css';
 
-function FeatureCard({ title, description }) {
-  return (
-    <div className="feature-card">
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function ProcessStep({ number, description }) {
+function ProcessStep({ number, title, description }) {
   return (
     <div className="process-step">
       <div className="step-number">{number}</div>
-      <p>{description}</p>
+      <div className="step-content">
+        <h3 className="step-title">{title}</h3>
+        <p className="step-description">{description}</p>
+      </div>
     </div>
   );
 }
@@ -34,36 +28,38 @@ function Earn100Profits() {
       
       <div className="container mx-auto px-4 py-16">
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8">Revolutionary Driver-Owner Model</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard 
-              title="No Commission Fees"
-              description="Keep all your fares - we don't take any cut from your hard-earned money."
-            />
-            <FeatureCard 
-              title="Become a Stakeholder"
-              description="Gain equity in the EaziRide platform and shape the future of ride-sharing."
-            />
-            <FeatureCard 
-              title="Long-term Benefits"
-              description="Enjoy increased earning potential and benefits as the platform grows."
-            />
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8">How It Works</h2>
+          <h2 className="text-3xl font-bold mb-8 text-black">How It Works</h2>
           <div className="process-steps">
-            <ProcessStep number="1" description="Sign up as an EaziRide driver" />
-            <ProcessStep number="2" description="Complete our comprehensive vetting process" />
-            <ProcessStep number="3" description="Start driving and earning 100% of your fares" />
-            <ProcessStep number="4" description="Accumulate driving hours to become eligible for ownership shares" />
-            <ProcessStep number="5" description="Receive ownership shares based on your contribution to the platform" />
+            <ProcessStep 
+              number="1"
+              title="Sign Up"
+              description="Register as an EaziRide driver through our easy online application process."
+            />
+            <ProcessStep 
+              number="2"
+              title="Vetting Process"
+              description="Complete our comprehensive vetting process to ensure safety and quality standards."
+            />
+            <ProcessStep 
+              number="3"
+              title="Start Earning"
+              description="Begin driving and earn 100% of your fares without any commission fees."
+            />
+            <ProcessStep 
+              number="4"
+              title="Accumulate Hours"
+              description="Drive more to accumulate hours and become eligible for ownership shares."
+            />
+            <ProcessStep 
+              number="5"
+              title="Become an Owner"
+              description="Receive ownership shares based on your contribution to the platform."
+            />
           </div>
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8">Benefits of Being a Driver-Owner</h2>
+          <h2 className="text-3xl font-bold mb-8 text-black">Benefits of Being a Driver-Owner</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <ul className="benefit-list">
               <li>Maximize your earnings with no commission fees</li>
