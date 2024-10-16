@@ -357,7 +357,7 @@ function Home() {
       {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-8 rounded-lg max-w-2xl w-full mx-4">
-            <h2 className="text-3xl font-bold mb-4">About Us</h2>
+            <h2 className="text-3xl font-bold mb-4 text-black">About Us</h2>
             <p className="text-lg mb-6">
               EaziRide is not just another ride-sharing platform. It is a movement that empowers 
               drivers to become driver-owners of the platform they serve with vested interest. 
