@@ -16,7 +16,7 @@ h1, h2 {
 
 .cta-button {
   background-color: #fff;
-  color: #000;
+  color: red;
   font-size: 18px;
   font-weight: 500;
   padding: 16px 32px;
@@ -46,7 +46,7 @@ h1, h2 {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #000;
+  background-color: red;
   z-index: 1;
 }
 
@@ -70,7 +70,7 @@ h1, h2 {
 }
 
 .step-number {
-  background-color: #000;
+  background-color: red;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -115,6 +115,6 @@ h1, h2 {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #000;
+  color: red;
   font-weight: bold;
 }
