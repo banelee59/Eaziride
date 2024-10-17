@@ -107,25 +107,32 @@ function Home() {
           <div className="md:w-1/2 mb-8 md:mb-0 md:order-2 order-1 md:pl-8">
             <h2 className="text-3xl font-bold mb-4 text-black">Our Safety Features</h2>
             <p className="text-lg mb-4 text-black">Re-inventing every ride sharing experience by introducing our first three ground-breaking safety features and bringing back trust in the e-hailing industry.</p>
+
             <ul className="space-y-4 mb-20 text-lg">
               <li className="flex items-start">
-                <i className="fas fa-user-shield text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <i className="fas fa-id-card text-red-500 mr-3 mt-1 text-[0.1rem]"></i>
                 <span>Drivers and Riders Verification</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-fingerprint text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <i className="fas fa-user text-red-500 mr-3 mt-1 text-[0.1rem]"></i>
                 <span>One-Profile-One-Driver (OPOD)</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-camera text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <div className="relative mr-3 mt-1">
+                  <i className="fas fa-camera text-red-500 text-[0.1rem]"></i>
+                  <i className="fas fa-user text-red-500 text-[0.075rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></i>
+                </div>
                 <span>Selfie-Of-The-Moment (SOTM)</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-sync-alt text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <div className="relative mr-3 mt-1">
+                  <i className="fas fa-camera text-red-500 text-[0.1rem]"></i>
+                  <i className="fas fa-exchange-alt text-red-500 text-[0.075rem] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></i>
+                </div>
                 <span>Selfie-Swap (SSW)</span>
               </li>
               <li className="flex items-start">
-                <i className="fas fa-trash-alt text-red-500 mr-3 mt-1 text-[0.4rem]"></i>
+                <i className="fas fa-hourglass-end text-red-500 mr-3 mt-1 text-[0.1rem]"></i>
                 <span>Auto-Selfie Deletion</span>
               </li>
             </ul>

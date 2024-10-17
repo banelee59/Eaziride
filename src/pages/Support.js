@@ -127,7 +127,7 @@ function Support() {
   return (
     <div className="support-page bg-gray-100 min-h-screen">
       <Header />
-      <div className="container mx-auto px-4 py-24">
+      <div className="container mx-auto px-4 py-36">
         <h1 className="text-5xl font-bold mb-12 text-center text-gray-800">How can we help you?</h1>
         
         <div className="mb-12 relative">
