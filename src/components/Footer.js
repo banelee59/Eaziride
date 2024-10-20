@@ -9,7 +9,8 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h3>EaziRide</h3>
-            <p>Your trusted ride-sharing service.</p>
+            <p>145 Second Street<br />Parkmore, Sandton,
+            2196<br />South Africa</p>
           </div>
           <div className="footer-section">
             <h3>Quick Links</h3>

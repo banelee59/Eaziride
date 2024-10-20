@@ -28,7 +28,7 @@ function Contact() {
                 <i className="fas fa-map-marker-alt text-3xl text-red-500 mr-4"></i>
                 <div>
                   <h3 className="text-xl font-semibold">Our Address</h3>
-                  <p>123 EaziRide Street, City, State 12345</p>
+                  <p>145 Second Street Parkmore, Sandton, 2196South Africa</p>
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@ function Contact() {
           <div className="md:w-2/3">
             <div className="mb-8 h-[450px]">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.732896179375!2d28.111356573798393!3d-26.009565756072217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956e0067534b2f%3A0x6637e85f16453f01!2sThornhill%20Office%20Park!5e0!3m2!1sen!2sza!4v1728327394664!5m2!1sen!2sza"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.8018603051705!2d28.042946474328744!3d-26.105385859954687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9573368fa18f03%3A0xa291e0949aaed301!2s145%20Second%20St%2C%20Parkmore%2C%20Sandton%2C%202196!5e0!3m2!1sen!2sza!4v1729429813993!5m2!1sen!2sza"
                 width="100%" 
                 height="100%" 
                 style={{border:0}} 
