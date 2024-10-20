@@ -7,11 +7,13 @@ import DriverOwner from './pages/DriverOwner';
 import Contact from './pages/Contact';
 import Earn100Profits from './pages/Earn100Profits';
 import Support from './pages/Support';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Header />
         <main>

@@ -18,11 +18,13 @@ function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <img 
-              src={`${process.env.PUBLIC_URL}/images/newLogo2.png`} 
-              alt="EaziRide Logo" 
-              className="h-16 w-auto mr-2"
-            />
+            <Link to="/">
+              <img 
+                src={`${process.env.PUBLIC_URL}/images/newLogo2.png`} 
+                alt="EaziRide Logo" 
+                className="h-16 w-auto mr-2 cursor-pointer"
+              />
+            </Link>
           </div>
           
           {/* Hamburger menu for mobile */}
