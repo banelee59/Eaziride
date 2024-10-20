@@ -46,7 +46,7 @@ function Header() {
         {/* Mobile menu */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4">
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col mb-14 text-right space-y-2">
               <Link to="/" className={linkStyle} onClick={toggleMenu}>Home</Link>
               <Link to="/earn-100-profits" className={linkStyle} onClick={toggleMenu}>Earn 100% Profits</Link>
               <Link to="/support" className={linkStyle} onClick={toggleMenu}>Support</Link>

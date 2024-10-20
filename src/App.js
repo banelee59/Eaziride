@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Earn100Profits from './pages/Earn100Profits';
 import Support from './pages/Support';
 
+
 function App() {
   return (
     <Router>
