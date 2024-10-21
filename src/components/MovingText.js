@@ -6,7 +6,7 @@ function MovingText() {
   const stats = [
     { label: "Onboarded Drivers", value: "10,000+" },
     { label: "Rejected Drivers", value: "500+" },
-    { label: "Paid Out Earnings", value: "R5M+" },
+    { label: "Earnings", value: "R5M+" },
     { label: "Completed Trips", value: "1M+" },
     { label: "Onboarded Riders", value: "50,000+" },
     { label: "Rejected Riders", value: "100+" }
